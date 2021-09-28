@@ -121,7 +121,7 @@ def compare(con_main,con_spare,tablesName,uniques,fields,canshu):
 
         condition = ""
         for i,unique in enumerate(uniques):
-            if(str(a[i]) = 'None'):
+            if(str(a[i]) == 'None'):
                 condition = condition + unique + "='" +  str(a[i]) + "' and "
             else:
                 condition = condition + unique + " is bull and " 
