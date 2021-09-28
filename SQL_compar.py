@@ -121,7 +121,10 @@ def compare(con_main,con_spare,tablesName,uniques,fields,canshu):
 
         condition = ""
         for i,unique in enumerate(uniques):
-           condition = condition + unique + "='" +  str(a[i]) + "' and "
+            if(str(a[i]) = 'None'):
+                condition = condition + unique + "='" +  str(a[i]) + "' and "
+            else:
+                condition = condition + unique + " is bull and " 
         condition = condition[:-5] 
         sql = sql + condition
         data_main = cursor_main.execute(sql).fetchone()
